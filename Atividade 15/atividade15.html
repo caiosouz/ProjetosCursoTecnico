@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="caio souza">
+	<meta name="robots" content="index, follow">
+	<meta name="keywords" content="html, jquery">
+	<meta name="description" content="Formulário">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="imagens/favicon.png"  type="image/png">
+	<link rel="stylesheet" href="imagens/favicon.png"  type="image/png" media="screen">
+	<style>
+		html {
+			font-family: sans-serif;
+		}
+
+		form div {
+			color: #f00
+			font-size: 13px;
+		}
+
+
+	</style>
+	<title>Formulário com jQuery</title>
+</head>
+<body>
+	<div class="container">
+		<form action="#" method="POST">
+			<label>Nome:</label>
+			<br>
+			<input type="text" placeholder="Digite o nome" id="nome">
+			<div id="nomeBranco"></div>
+			<br>
+			<label>Data de nascimento:</label>
+			<br>
+			<input type="number" placeholder="Dia" id="diaNasc" value="01">
+			<select id="mesNasc">
+				<option>Janeiro</option>
+				<option>Fevereiro</option>
+				<option>Março</option>
+				<option>Abril</option>
+				<option>Maio</option>
+				<option>Junho</option>
+				<option>Julho</option>
+				<option>Agosto</option>
+				<option>Setembro</option>
+				<option>Outubro</option>
+				<option>Novembro</option>
+				<option>Dezembro</option>
+			</select>
+			<input type="number" placeholder="Ano" id="anoNasc" value="2000">
+			<div id="nascBranco"></div>
+			<br>
+			<label>E-mail:</label>
+			<br>
+			<input type="email" placeholder="Digite o e-mail" id="email">
+			<div id="emailBranco"></div>
+			<br>
+			<input type="submit" value="Enviar" id="enviar">
+		</form>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//focus
+			$("input").not("#enviar").focus(function(){
+				$(this).css("background-color", "#cff");
+			}).blur(function(){
+				$(this).css("background-color", "#fff");
+			});
+			
+			//nome
+			$("#nome").blur(function(){
+				if ($(this).val() == "")
+					$("#nomeBranco").text("Você deixou campo nome em branco!");
+				else
+					$("#nomeBranco").empty();
+			});
+			
+			//dia do nascimento
+			$("#diaNasc").blur(function(){
+				if ($(this).val() == "")
+					$("#nascBranco").text("Você deixou campo dia do nascimento em branco!");
+				else
+					$("#nascBranco").empty();
+			});
+			
+			//ano do nascimento
+			$("#anoNasc").blur(function(){
+				if ($(this).val() == "")
+					$("#nascBranco").text("Você deixou campo ano do nascimento em branco!");
+				else
+					$("#nascBranco").empty();
+			});
+			
+			//e-mail
+			$("#email").blur(function(){
+				if ($(this).val() == "")
+					$("#emailBranco").text("Você deixou e-mail em branco!");
+				else
+					$("#emailBranco").empty();
+			});
+			
+			//submit
+			$("form").submit(function(){
+				//declaração de variáveis
+				var nome = $("#nome").val();
+				var diaNasc = $("#diaNasc").val();
+				var mesNasc = $("#mesNasc").val();
+				var anoNasc = $("#anoNasc").val();
+				var email = $("#email").val();
+				
+				//verificação de dados
+				if ((nome == "") || (diaNasc == "") || (mesNasc == "") || (anoNasc == "") || (email == ""))
+					alert("Preencha todos os campos");
+				else 
+					alert("Dados enviados com sucesso");
+			});
+		});//fim do $(document).ready()
+
+	</script>
+</body>
+</html>

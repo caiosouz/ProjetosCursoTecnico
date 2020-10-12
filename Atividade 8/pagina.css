@@ -1,0 +1,31 @@
+
+.conteudo{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+	background-color: #000;
+	align-items: center;
+
+}
+	
+#logo{
+	width: 100%;
+	height: 100%;
+	background-image: url("alex-kidd-logo.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 150px;
+
+}
+
+#doll{
+	width: 100%;
+	height: 100%;
+	background-image: url("alexkiddinmiracleworld.png");
+	background-repeat: no-repeat;
+	background-size: 80px;
+
+
+}
+

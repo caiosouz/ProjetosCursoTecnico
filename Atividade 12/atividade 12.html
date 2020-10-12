@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Calculo-I.M.C</title>
+
+</head>
+<body>
+	<script>
+		var nome = prompt("Digite seu nome");
+		var altura = prompt("Digite sua altura");
+		var peso =prompt ("Digite seu peso");
+		imc=peso/(altura*altura);
+
+		if(imc < 18.5){
+			document.write( nome + "<h1>voce está abaixo do peso</h1>")
+		}else if(imc >18.5 && imc< 25){
+			document.write( nome + " <h1>seu peso está normal</h1>")
+		}else if(imc > 25 && imc < 30){
+			document.write( nome + " <h1>voce está acima do peso</h1> ");
+		}else if (imc>30) {
+			document.write( nome + " <h1>voce está com obesidade morbida</h1> ");
+		}
+	</script>
+
+</body>
+</html>

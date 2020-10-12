@@ -1,0 +1,81 @@
+<html lang="pt-br"><head>
+
+	<meta charset="UTF-8">
+
+	<meta name="author" content="Seu Nome">
+
+	<meta name="robots" content="index, follow">
+	<meta name="keywords" content="Palavras-chave para os sites de busca aqui">
+	<meta name="description" content="Descrição da sua página aqui.">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="imagens/howling_wolf.png" type="image/png">
+
+	<link rel="stylesheet" href="css/estilos.css" type="text/css" media="screen">
+
+	<style>
+		body {
+			max-width: 100%;
+			max-height: 100%;
+			background-image: url(imagens/grama.jpg!d);
+			background-size: 100%;
+		}
+
+	</style>
+
+	<title>Lobo jQuery</title>
+
+</head>
+
+<body>
+	
+	<div class="container">
+
+		<img src="imagens/wolf-howl.png" alt="lobo" style="width: 100px">
+		<audio src="audio/lobo_uivando.mp3" autoplay=""></audio>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(document).keyup(function(tecla){
+				switch (tecla.keyCode)
+					{
+						case 39:
+							$("img").animate({left: '+=100px'}, "fast").css("width", "100px");
+							$.when($("img").attr("src", "imagens/wolf-walk-right-02.png")).done(function(){
+								$("img").attr("src", "imagens/wolf-walk-right-03.png");
+							});
+							break;
+						case 37:
+							$("img").animate({left: '+=-100px'}, "fast").css("width", "100px");
+							$.when($("img").attr("src", "imagens/wolf-walk-left-02.png")).done(function(){
+								$("img").attr("src", "imagens/wolf-walk-left-03.png");
+							});
+							break;
+						case 38:
+							$("img").animate({top: '+=-100px'}, "fast").css("width", "50px");
+							$.when($("img").attr("src", "imagens/wolf-walk-up-02.png")).done(function(){
+								$("img").attr("src", "imagens/wolf-walk-up-03.png");
+							});
+							break;
+						case 40:
+							$("img").animate({top: '+=100px'}, "fast").css("width", "50px");
+							$.when($("img").attr("src", "imagens/wolf-walk-down-02.png")).done(function(){
+								$("img").attr("src", "imagens/wolf-walk-down-03.png");
+							});
+							break;
+						case 13:
+							$("img").attr("src", "imagens/wolf-howl.png").css("width", "100px");
+							$("audio").attr("src", "audio/lobo_uivando.mp3");
+							break;
+					}
+			});
+		});
+	</script>
+</body></html>

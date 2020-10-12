@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ativi02.html</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="ativi02.js"></script>
+</head>
+<body>
+	<div>
+		<h1>calculadora de médias</h1>
+		<div id="total">
+			<input type="text" id="totalNotas" value="3" placeholder="digite o total de notas" />
+			<button type="button" onclick="CalcularMedia.exibirEntradas();">OK</button>
+		</div>
+		<div id="calculo" style="display: none;">
+			<div id="entradas"></div>
+			<button type="button" onclick="CalcularMedia.calcularMedia();">Calcular</button>
+			<div id="resultado"></div>
+		</div>
+	</div>
+</body>
+</html>

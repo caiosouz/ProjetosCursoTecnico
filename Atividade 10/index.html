@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="author" content="Caio de Souza">
+	<meta name="robots" content="index, follow">
+	<meta name="keywords" content="desenvolvedor, progamador, progamação, developer, java, html, html 5, html5, css, cascading, style, sheet,senai">
+	<meta name="description" content="Página criada para o curso de desenvolvedor java">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="imagens/fundo.png" type="image/png" >
+	<title>CSS com divs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="grid.css" type="text/css" media="all">
+	<link rel="stylesheet" href="estilos.css" type="text/css" media="all">
+
+	<style>
+		
+		div {
+			width: 25%;
+			height: 400px;
+			border: 1px groove #777;
+			border-radius: 10px
+			background-image: linear-gradient(to botton right, #000, #005);
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+	<input type="text" placeholder="O que você achou da página?" id="comentario"/>
+	<button onclick="comentario();">Postar</button>
+
+	<script type="js/comentário.js"></script>
+
+	<header>
+		<img src="imagens/fundo.png" alt="logo" id="logo">
+	</header>
+
+	<div class="container">
+		
+		<section class="row">
+			<article class="col-12 col-t-4 col-d-3" id="artigo">
+				<a href="https://coronavirus.saude.gov.br/">
+					<div id="artigo" class="more-rounded">
+						<figure id="artigo01" class="bg"></figure>
+						<h5>Coronavírus</h5>
+						<h3>
+							coronavírus: o que você precisa saber e como prevenir
+						</h3>
+					</div>
+				</a>
+			</article>
+
+			<article class="col-12 col-t-4 col-d-3" id="artigo">
+				<a href="https://olhardigital.com.br/coronavirus/noticia/como-oximetros-de-dedo-podem-ajudar-na-deteccao-de-sintoma-da-covid-19/99807"><div id="artigo" class="more-rounded">
+						<figure id="artigo02" class="bg"></figure>
+						<h5>Tecnologia</h5>
+						<h3>
+							Como oxímetros de dedo podem ajudar na detecção de sintoma da Covid-19
+						</h3>
+					</div></a>
+			</article>
+
+			<article class="col-12 col-t-4 col-d-3" id="artigo">
+				<a href="https://www.tecmundo.com.br/mercado/152427-diretor-abin-assumir-pf-saiba-agencia.htm"><div id="artigo" class="more-rounded">
+						<figure id="artigo03" class="bg"></figure>
+						<h5>Tecnologia</h5>
+						<h3>
+							Diretor da Abin pode assumir PF; saiba o que a agência faz
+						</h3>
+					</div></a>
+			</article>
+
+			<article class="col-12 col-t-4 col-d-3" id="artigo">
+				<a href="https://www.tecmundo.com.br/mercado/151761-estudo-indica-equipes-ti-mulheres-comunicam-melhor.htm"><div id="artigo" class="more-rounded">
+						<figure id="artigo04" class="bg"></figure>
+						<h5>Tecnologia</h5>
+						<h3>
+							Estudo indica que equipes de TI com mulheres se comunicam melhor
+						</h3>
+					</div></a>
+			</article>
+		</section>
+	</div>
+
+	<div onmouseover="passarCima();"></div>
+
+	<footer></footer>
+
+	<button onclick="apertarBotão();">Aperte o botão</button>
+
+	<script type="js/eventos.js"></script>
+
+</body>
+</html>
